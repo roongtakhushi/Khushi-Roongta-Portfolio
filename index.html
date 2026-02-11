@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Khushi Roongta - IT Engineering Student specializing in Web Development and Cybersecurity">
+    <meta name="keywords" content="Khushi Roongta, Web Developer, Cybersecurity, IT Engineering, Portfolio">
+    <meta name="author" content="Khushi Roongta">
+    <title>Khushi Roongta | Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-space-navy text-soft-white">
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated Particle Background -->
+        <canvas id="particleCanvas" class="absolute inset-0 w-full h-full"></canvas>
+
+        <!-- Gradient Mesh Overlay -->
+        <div class="gradient-mesh"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+            <h1 class="hero-name text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
+                Khushi Roongta
+            </h1>
+            <p class="hero-tagline text-2xl md:text-3xl mb-8 text-cyber-teal animate-fade-in-delay">
+                Engineering secure digital experiences where innovation meets precision.
+            </p>
+            <p class="text-lg md:text-xl mb-12 text-gray-300 animate-fade-in-delay-2">
+                Second Year IT Engineering Student | MIT College of Engineering, Pune
+            </p>
+
+            <!-- Tech Stack Ticker -->
+            <div class="tech-ticker-container">
+                <div class="tech-ticker">
+                    <div class="tech-ticker-track">
+                        <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                        <!-- Duplicate for seamless loop -->
+                        <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About/Education Section -->
+    <section id="about" class="py-20 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-5xl font-bold mb-16 text-center reveal-on-scroll">
+                About <span class="text-gradient">Me</span>
+            </h2>
+
+            <!-- Profile Header (Image + Bio) -->
+            <div class="profile-header flex flex-col md:flex-row items-center gap-12 mb-20 reveal-on-scroll">
+                <div class="profile-image-container">
+                    <div class="profile-image-wrapper">
+                        <img src="krportfolio.jpeg" alt="Profile" class="profile-img"
+                            onclick="openImageModal(this.src)">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+
+                <div class="profile-bio flex-1">
+                    <h3 class="text-3xl font-bold mb-6">Hello, I'm <span class="text-gradient">Khushi Roongta</span>
+                    </h3>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        I am a passionate technology enthusiast currently pursuing my B.Tech in Information Technology.
+                        My journey involves a deep dive into full-stack development, AI/ML, and cybersecurity.
+                        I thrive on solving complex problems and building innovative solutions that make a real-world
+                        impact.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        With a strong foundation in coding and a creative mindset, I am constantly exploring new
+                        technologies
+                        to expand my skillset. From winning hackathons to mastering new frameworks, I am dedicated to
+                        continuous learning and growth in the tech landscape.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <!-- Education Timeline -->
+            <div class="education-timeline mb-20 reveal-on-scroll">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="text-2xl font-semibold mb-2">B.Tech in Information Technology</h3>
+                        <p class="text-cyber-teal mb-2">MIT College of Engineering, Alandi, Pune</p>
+                        <p class="text-gray-400">2024 - 2028 | Second Year</p>
+                        <p class="text-gray-300 mt-2">Pursuing comprehensive education in IT with focus on software
+                            development, databases, and cybersecurity.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="text-2xl font-semibold mb-2">Web Development Journey</h3>
+                        <p class="text-cyber-teal mb-2">Self-Learning & Online Courses</p>
+                        <p class="text-gray-400">2024 - Present</p>
+                        <p class="text-gray-300 mt-2">Mastered HTML, CSS, and JavaScript through hands-on projects.
+                            Built multiple full-stack applications using modern frameworks and databases including
+                            MongoDB and SQL.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="text-2xl font-semibold mb-2">Python & Data Science</h3>
+                        <p class="text-cyber-teal mb-2">Cisco & Analytics Vidhya</p>
+                        <p class="text-gray-400">2024</p>
+                        <p class="text-gray-300 mt-2">Completed Python Essentials certification from Cisco.
+                            Participated
+                            in Datathon 2025 and gained expertise in data analytics and AI fundamentals.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="text-2xl font-semibold mb-2">Cybersecurity Specialization</h3>
+                        <p class="text-cyber-teal mb-2">Cisco Networking Academy</p>
+                        <p class="text-gray-400">2024</p>
+                        <p class="text-gray-300 mt-2">Earned multiple certifications including Cybersecurity
+                            Essentials,
+                            Introduction to Cybersecurity, and IoT Architectural Engineering from Cisco.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="text-2xl font-semibold mb-2">Competitive Programming & AI</h3>
+                        <p class="text-cyber-teal mb-2">Various Competitions</p>
+                        <p class="text-gray-400">2024 - 2025</p>
+                        <p class="text-gray-300 mt-2">Participated in Code Arena, Prompt Wars, and other coding
+                            competitions. Explored modern AI concepts and prompt engineering techniques.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="text-2xl font-semibold mb-2">Entrepreneurship & Business Skills</h3>
+                        <p class="text-cyber-teal mb-2">Wadhwani Foundation & AICTE</p>
+                        <p class="text-gray-400">2025</p>
+                        <p class="text-gray-300 mt-2">Completed entrepreneurship programs from Wadhwani Foundation
+                            and
+                            AICTE, developing business acumen alongside technical skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section with Horizontal Progress -->
+        <h3 class="text-3xl font-semibold mb-12 text-center reveal-on-scroll">Technical Skills</h3>
+        <div class="skills-grid grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-12 max-w-5xl mx-auto">
+
+            <!-- HTML -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="html" data-progress="90">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                        <span class="font-semibold text-lg">HTML</span>
+                    </div>
+                    <span class="skill-percentage font-bold">90%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="css" data-progress="85">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-css3-alt text-2xl text-blue-500"></i>
+                        <span class="font-semibold text-lg">CSS</span>
+                    </div>
+                    <span class="skill-percentage font-bold">85%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="javascript" data-progress="80">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-js text-2xl text-yellow-400"></i>
+                        <span class="font-semibold text-lg">JavaScript</span>
+                    </div>
+                    <span class="skill-percentage font-bold">80%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="mongodb" data-progress="75">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-database text-2xl text-green-500"></i>
+                        <span class="font-semibold text-lg">MongoDB</span>
+                    </div>
+                    <span class="skill-percentage font-bold">75%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- SQL -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="sql" data-progress="70">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-server text-2xl text-blue-400"></i>
+                        <span class="font-semibold text-lg">SQL</span>
+                    </div>
+                    <span class="skill-percentage font-bold">70%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Python -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="python" data-progress="75">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-python text-2xl text-yellow-300"></i>
+                        <span class="font-semibold text-lg">Python</span>
+                    </div>
+                    <span class="skill-percentage font-bold">75%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="skill-bar-container reveal-on-scroll" data-skill="cybersecurity" data-progress="65">
+                <div class="skill-info flex justify-between items-center mb-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-shield-alt text-2xl text-red-500"></i>
+                        <span class="font-semibold text-lg">Cybersecurity</span>
+                    </div>
+                    <span class="skill-percentage font-bold">65%</span>
+                </div>
+                <div class="skill-track w-full h-3 rounded-full overflow-hidden">
+                    <div class="skill-fill h-full rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Coding Profiles Section -->
+    <section id="coding-profiles" class="py-20 px-6 relative bg-space-navy-light">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-5xl font-bold mb-16 text-center reveal-on-scroll">
+                Problem <span class="text-gradient">Solving</span>
+            </h2>
+
+            <div class="coding-grid flex justify-center reveal-on-scroll">
+                <!-- LeetCode Card -->
+                <div
+                    class="leetcode-card relative p-8 rounded-2xl border border-gray-700 bg-opacity-30 backdrop-blur-md max-w-4xl w-full">
+                    <div class="leetcode-header flex items-center justify-between mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="leetcode-icon-wrapper p-3 rounded-lg bg-[#262626]">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                    alt="LeetCode" class="w-10 h-10 object-contain filter invert">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">LeetCode Profile</h3>
+                                <p class="text-gray-400">@KRoongta</p>
+                            </div>
+                        </div>
+                        <a href="https://leetcode.com/u/KRoongta/" target="_blank" class="btn-link">
+                            View Profile <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="leetcode-stats-container grid grid-cols-1 md:grid-cols-2 gap-8" id="leetcodeStats">
+                        <!-- Loading State -->
+                        <div class="col-span-full text-center py-8">
+                            <div
+                                class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-electric-violet">
+                            </div>
+                            <p class="text-gray-400 mt-4">Loading stats...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-5xl font-bold mb-16 text-center reveal-on-scroll">
+                Featured <span class="text-gradient">Projects</span>
+            </h2>
+
+            <div class="projects-grid">
+                <!-- Project 1: AlgoSprint -->
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="tech-ribbon">
+                            <span class="tech-tag">Data Structures</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">AlgoSprint</h3>
+                        <p class="project-tagline">Search Algorithm Visualizer</p>
+                        <p class="project-description">
+                            A collaborative team project that simulates and visualizes various search operations in data
+                            structures, making complex algorithms easy to understand through interactive demonstrations.
+                        </p>
+                        <div class="project-links">
+                            <button class="btn-preview"
+                                onclick="openPreview('https://shahpure15.github.io/DS-Project/Khushi-Searching/index.html')">
+                                <i class="fas fa-eye"></i> Live Preview
+                            </button>
+                            <a href="https://shahpure15.github.io/DS-Project/Khushi-Searching/index.html"
+                                target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Full Demo
+                            </a>
+                            <a href="https://github.com/Shahpure15/DS-Project/tree/main" target="_blank"
+                                class="btn-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Soap Making Website -->
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="tech-ribbon">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">The Soap Making Website</h3>
+                        <p class="project-tagline">Chemistry Prototype Platform</p>
+                        <p class="project-description">
+                            An educational chemistry prototype website that demonstrates the soap-making process through
+                            interactive elements and engaging visual design, bridging science and web technology.
+                        </p>
+                        <div class="project-links">
+                            <button class="btn-preview"
+                                onclick="openPreview('https://roongtakhushi.github.io/Chem_proto/')">
+                                <i class="fas fa-eye"></i> Live Preview
+                            </button>
+                            <a href="https://roongtakhushi.github.io/Chem_proto/" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Full Demo
+                            </a>
+                            <a href="https://github.com/roongtakhushi/Chem_proto" target="_blank" class="btn-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: EduTrack -->
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="tech-ribbon">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">EduTrack</h3>
+                        <p class="project-tagline">Smart Attendance Tracker</p>
+                        <p class="project-description">
+                            A comprehensive attendance tracking system designed for students to monitor their class
+                            attendance, calculate percentages, and stay on top of their academic requirements.
+                        </p>
+                        <div class="project-links">
+                            <button class="btn-preview"
+                                onclick="openPreview('https://roongtakhushi.github.io/Edutrack/')">
+                                <i class="fas fa-eye"></i> Live Preview
+                            </button>
+                            <a href="https://roongtakhushi.github.io/Edutrack/" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Full Demo
+                            </a>
+                            <a href="https://github.com/roongtakhushi/Edutrack" target="_blank" class="btn-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Campus Connect -->
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="tech-ribbon">
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Firebase Auth</span>
+                        </div>
+                        <h3 class="project-title">Campus Connect</h3>
+                        <p class="project-tagline">Campus Security Solution</p>
+                        <p class="project-description">
+                            A secure campus portal (formerly Lost & Found) for reporting and claiming lost items with
+                            real-time database updates
+                            and authenticated user access, ensuring safe and efficient item recovery.
+                        </p>
+                        <div class="project-links">
+                            <button class="btn-preview"
+                                onclick="openPreview('https://campus-connect-z7xe.vercel.app/')">
+                                <i class="fas fa-eye"></i> Live Preview
+                            </button>
+                            <a href="https://campus-connect-z7xe.vercel.app/" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Full Demo
+                            </a>
+                            <a href="https://github.com/roongtakhushi/campus-connect" target="_blank" class="btn-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Campus Tradz -->
+                <div class="project-card reveal-on-scroll">
+                    <div class="project-card-inner">
+                        <div class="tech-ribbon">
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Campus Tradz</h3>
+                        <p class="project-tagline">Student Marketplace Platform</p>
+                        <p class="project-description">
+                            An exclusive internal marketplace for college students to trade goods, featuring secure
+                            student authentication via a verified college database and seamless transaction management.
+                        </p>
+                        <div class="project-links">
+                            <span class="btn-link disabled">
+                                <i class="fas fa-code"></i> In Development
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-5xl font-bold mb-16 text-center reveal-on-scroll">
+                Certifications & <span class="text-gradient">Achievements</span>
+            </h2>
+
+            <div class="certificates-wrapper relative">
+                <button class="scroll-btn prev-btn" id="scrollLeftBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="certificates-grid" id="certificatesGrid">
+                    <!-- Certificates will be dynamically generated by JavaScript -->
+                </div>
+                <button class="scroll-btn next-btn" id="scrollRightBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <p class="text-center text-gray-400 mt-12 reveal-on-scroll">
+                <i class="fas fa-info-circle"></i> Hover over cards to view certificate details
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="section-title text-5xl font-bold mb-16 reveal-on-scroll">
+                Let's <span class="text-gradient">Connect</span>
+            </h2>
+
+            <p class="text-xl mb-12 text-gray-300 reveal-on-scroll">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+
+            <!-- Email Button -->
+            <div class="email-container reveal-on-scroll">
+                <button class="email-button" id="emailButton">
+                    <span class="email-icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="email-text">khushiroongta0801@gmail.com</span>
+                    <span class="email-copy-icon">
+                        <i class="fas fa-copy"></i>
+                    </span>
+                </button>
+                <p class="text-sm text-gray-400 mt-4">Click to copy email address</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links reveal-on-scroll">
+                <a href="https://www.linkedin.com/in/khushi-roongta-3b091638b" target="_blank"
+                    class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/roongtakhushi" target="_blank" class="social-icon github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:khushiroongta0801@gmail.com" class="social-icon email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">
+                &copy; 2026 Khushi Roongta. Crafted with <i class="fas fa-heart text-sunset-coral"></i> and creativity.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Project Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Live Project Preview</h3>
+                <button class="modal-close" onclick="closePreview()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="previewFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div id="imageModal" class="modal image-modal">
+        <span class="close-image-modal" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content-image" id="fullImage">
+        <div id="imageCaption"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Email copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
