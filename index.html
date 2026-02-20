@@ -28,6 +28,43 @@
 
 <body class="bg-space-navy text-soft-white">
 
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#hero" class="navbar-logo">
+                <span class="text-gradient">KR</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="navbar-links" id="navLinks">
+                <li><a href="#hero" class="nav-link" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#coding-profiles" class="nav-link" data-section="coding-profiles">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger (mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li><a href="#hero" class="mobile-link" data-section="hero">Home</a></li>
+            <li><a href="#about" class="mobile-link" data-section="about">About</a></li>
+            <li><a href="#coding-profiles" class="mobile-link" data-section="coding-profiles">Skills</a></li>
+            <li><a href="#projects" class="mobile-link" data-section="projects">Projects</a></li>
+            <li><a href="#certificates" class="mobile-link" data-section="certificates">Certificates</a></li>
+            <li><a href="#contact" class="mobile-link" data-section="contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- Animated Particle Background -->
