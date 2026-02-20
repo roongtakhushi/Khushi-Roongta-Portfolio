@@ -1418,10 +1418,21 @@ h6 {
 @media (max-width: 768px) {
     .hero-name {
         font-size: 3rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     .hero-tagline {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        padding: 0 0.5rem;
     }
 
     .section-title {
@@ -1464,10 +1475,22 @@ h6 {
     .hero-name {
         font-size: 2rem;
         letter-spacing: -0.03em;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     .hero-tagline {
-        font-size: 1.125rem;
+        font-size: 1.1rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .hero-subtitle {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        padding: 0 0.25rem;
     }
 
     .tech-badge {
