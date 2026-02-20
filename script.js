@@ -387,7 +387,7 @@ document.addEventListener('keydown', (e) => {
 class LeetCodeStats {
     constructor() {
         this.username = 'KRoongta';
-        this.apiUrl = `https://leetcode-stats-api.herokuapp.com/${this.username}`;
+        this.apiUrl = `https://leetcode-stats.tashif.codes/${this.username}`;
         this.container = document.getElementById('leetcodeStats');
 
         this.init();
@@ -464,7 +464,7 @@ class LeetCodeStats {
     }
 
     renderStats(data) {
-        const { totalSolved, easySolved, mediumSolved, hardSolved, totalQuestions, easyTotal, mediumTotal, hardTotal, acceptanceRate, submissionCalendar } = data;
+        const { totalSolved, easySolved, mediumSolved, hardSolved, totalQuestions, totalEasy: easyTotal, totalMedium: mediumTotal, totalHard: hardTotal, acceptanceRate, submissionCalendar } = data;
 
         const streak = this.calculateStreak(submissionCalendar);
         const streakDisplay = streak > 0 ?
@@ -627,17 +627,96 @@ class EmailCopy {
 }
 
 // ===================================
-// Smooth Scroll
+// Navbar Controller
+// ===================================
+class NavbarController {
+    constructor() {
+        this.navbar = document.getElementById('navbar');
+        this.hamburger = document.getElementById('hamburger');
+        this.mobileMenu = document.getElementById('mobileMenu');
+        this.navLinks = document.querySelectorAll('.nav-link');
+        this.mobileLinks = document.querySelectorAll('.mobile-link');
+        this.sections = document.querySelectorAll('section[id]');
+        this.navbarHeight = this.navbar ? this.navbar.offsetHeight : 70;
+
+        this.init();
+    }
+
+    init() {
+        // Scroll: add .scrolled class + run scroll-spy
+        window.addEventListener('scroll', () => {
+            this.onScroll();
+        }, { passive: true });
+
+        // Hamburger toggle
+        if (this.hamburger) {
+            this.hamburger.addEventListener('click', () => {
+                this.toggleMobileMenu();
+            });
+        }
+
+        // Close mobile menu when a link is clicked
+        this.mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                this.closeMobileMenu();
+            });
+        });
+
+        // Initial spy call
+        this.onScroll();
+    }
+
+    onScroll() {
+        const scrollY = window.scrollY;
+
+        // Toggle background when scrolled past 50px
+        if (this.navbar) {
+            this.navbar.classList.toggle('scrolled', scrollY > 50);
+        }
+
+        // Scroll-spy: find current section
+        let currentSection = '';
+        this.sections.forEach(section => {
+            const sectionTop = section.offsetTop - this.navbarHeight - 20;
+            if (scrollY >= sectionTop) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        // Update desktop links
+        this.navLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.section === currentSection);
+        });
+
+        // Update mobile links
+        this.mobileLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.section === currentSection);
+        });
+    }
+
+    toggleMobileMenu() {
+        const isOpen = this.mobileMenu.classList.toggle('open');
+        this.hamburger.classList.toggle('open', isOpen);
+    }
+
+    closeMobileMenu() {
+        this.mobileMenu.classList.remove('open');
+        this.hamburger.classList.remove('open');
+    }
+}
+
+// ===================================
+// Smooth Scroll (navbar-offset aware)
 // ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const navbar = document.getElementById('navbar');
+            const offset = navbar ? navbar.offsetHeight : 0;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
         }
     });
 });
@@ -663,6 +742,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize LeetCode Stats
     new LeetCodeStats();
+
+    // Initialize navbar
+    new NavbarController();
 
     // Initialize email copy
     new EmailCopy();
