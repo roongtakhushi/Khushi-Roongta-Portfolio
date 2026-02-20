@@ -1415,24 +1415,40 @@ h6 {
 /* ===================================
    Responsive Design
    =================================== */
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* Hero text always wraps and fits */
+.hero-name {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.hero-tagline,
+.hero-subtitle {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
     .hero-name {
-        font-size: 3rem;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        font-size: clamp(1.8rem, 8vw, 3rem) !important;
+        letter-spacing: -0.02em;
     }
 
     .hero-tagline {
-        font-size: 1.4rem;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        font-size: clamp(1rem, 4.5vw, 1.4rem) !important;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        font-size: clamp(0.8rem, 3.5vw, 1rem) !important;
         padding: 0 0.5rem;
+        line-height: 1.6;
     }
 
     .section-title {
@@ -1473,24 +1489,18 @@ h6 {
 
 @media (max-width: 480px) {
     .hero-name {
-        font-size: 2rem;
+        font-size: clamp(1.6rem, 7.5vw, 2.2rem) !important;
         letter-spacing: -0.03em;
-        overflow-wrap: break-word;
-        word-break: break-word;
     }
 
     .hero-tagline {
-        font-size: 1.1rem;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
     }
 
     .hero-subtitle {
-        font-size: 0.875rem;
-        line-height: 1.6;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        font-size: clamp(0.75rem, 3.2vw, 0.9rem) !important;
         padding: 0 0.25rem;
+        line-height: 1.6;
     }
 
     .tech-badge {
@@ -1514,7 +1524,15 @@ h6 {
 
 @media (max-width: 360px) {
     .hero-name {
-        font-size: 1.75rem;
+        font-size: clamp(1.4rem, 7vw, 1.8rem) !important;
+    }
+
+    .hero-tagline {
+        font-size: clamp(0.85rem, 3.5vw, 1rem) !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem !important;
     }
 }
 
