@@ -261,6 +261,7 @@ h6 {
 #hero {
     position: relative;
     background: var(--space-navy);
+    overflow-x: hidden;
 }
 
 #particleCanvas {
@@ -1429,9 +1430,30 @@ h6 {
 
 .hero-tagline,
 .hero-subtitle {
-    overflow-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    max-width: 100%;
+}
+
+/* Force hero content container to stay within viewport */
+#hero .z-10 {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* High-specificity override for hero paragraphs */
+#hero p.hero-tagline,
+#hero p.hero-subtitle {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    display: block;
+    width: 100%;
     max-width: 100%;
 }
 
